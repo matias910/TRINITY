@@ -37,6 +37,7 @@ button {
   width: 100%;
   border-bottom: 1px solid rgb(226, 222, 222);
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .Left-Head,
@@ -49,12 +50,13 @@ button {
 .Left-Head {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  position: relative;
+  justify-content: flex-start;
 }
 
 .middle {
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .middle img {
   height: 90px;
@@ -70,12 +72,6 @@ button {
   transition: opacity 0.3s ease;
 }
 .logo-black {
-  opacity: 1;
-}
-.logo-white {
-  opacity: 1;
-}
-.Header:hover .logo-white {
   opacity: 1;
 }
 
@@ -99,8 +95,7 @@ button {
 }
 
 .Secondary-Header {
-  justify-content: flex-start;
-  padding-left: 450px;
+  justify-content: flex-end;
   position: relative;
 }
 
