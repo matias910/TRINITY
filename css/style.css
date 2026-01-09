@@ -47,12 +47,10 @@ button {
   align-items: center;
 }
 .Left-Head {
-  width: 500px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   position: relative;
-  right: 150px;
 }
 
 .middle {
@@ -98,14 +96,12 @@ button {
   font-size: 16px;
   display: flex;
   gap: 40px;
-  position: relative;
-  right: 90px;
 }
 
 .Secondary-Header {
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-left: 450px;
   position: relative;
-  right: 60px;
 }
 
 .Shopping-Info {
