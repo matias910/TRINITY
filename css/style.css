@@ -1,0 +1,375 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.First-Part {
+  background-image: url(../images/backgrounds/main.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 910px;
+  overflow: hidden;
+}
+
+button:hover {
+  cursor: pointer;
+}
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: transparent;
+  color: black;
+  transition: all 0.3s ease;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid rgb(226, 222, 222);
+  z-index: 1000;
+}
+
+.Left-Head,
+.middle,
+.Secondary-Header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.Left-Head {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  right: 150px;
+}
+
+.middle {
+  justify-content: center;
+}
+.middle img {
+  height: 90px;
+  width: auto;
+}
+.logo {
+  height: 70px;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+}
+.logo-black {
+  opacity: 1;
+}
+.logo-white {
+  opacity: 1;
+}
+.Header:hover .logo-white {
+  opacity: 1;
+}
+
+.Header:hover .logo-black {
+  opacity: 1;
+}
+
+.logo button {
+  height: 70px;
+  position: relative;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Primary-Header {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  right: 90px;
+}
+
+.Secondary-Header {
+  justify-content: flex-end;
+  position: relative;
+  right: 60px;
+}
+
+.Shopping-Info {
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  color: black;
+}
+
+.wppIcon img {
+  width: 60px;
+  height: 60px;
+}
+.wppBtn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+.wppBtn:hover {
+  animation: wppAnimation 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes wppAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(40deg);
+    transform: scale(1.2);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.Header:hover {
+  background-color: white;
+  color: black;
+}
+
+.Header:hover .icon {
+  background-color: white;
+  color: black;
+}
+
+.Header.scrolled {
+  background-color: white;
+  color: black;
+}
+
+.Header.scrolled .icon {
+  background-color: white;
+  color: black;
+}
+
+.Header.scrolled .logo-black {
+  opacity: 1;
+}
+
+.Second-Part {
+  background-image: url(../images/backgrounds/second.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 910px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.DropName {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 50px;
+  position: relative;
+  bottom: 100px;
+}
+
+.DropInfo {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 20px;
+  position: relative;
+  bottom: 100px;
+}
+.ExploreBtn {
+  position: relative;
+  bottom: 80px;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: transparent;
+  transition-duration: 0.3s;
+  z-index: 1;
+}
+
+.ExploreBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transition: width 0.6s ease;
+}
+
+.ExploreBtn:hover {
+  background: white;
+  color: black;
+  scale: 1.2;
+}
+.ExploreBtn:hover::before {
+  width: 100%;
+}
+
+.footerMain {
+  height: 300px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  font-family: "Red Hat Display", sans-serif;
+  /*background-image: url(../images/footer.png);*/
+  background-position: 50%;
+  background-size: cover;
+  background-position: 20%;
+  border-top: 1px solid rgb(226, 222, 222);
+}
+
+.footerLogo {
+  align-self: center;
+}
+
+.footerLogo img {
+  height: 90px;
+  width: auto;
+}
+
+.footerContent {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.footerTitle {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: rgb(213, 219, 224);
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  color: rgb(49, 50, 51);
+}
+
+.footerButtons {
+  transition-property: color;
+  transition-duration: 0.3s;
+  background: none;
+}
+
+.footerButtons:hover {
+  color: rgb(137, 140, 143);
+}
+
+/* Account Page Styles */
+.First-Part-Account {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.LoginContent {
+  font-family: "Red Hat Display", sans-serif;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(105, 108, 110);
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.LoginTitle {
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.LoginText {
+  font-size: 14px;
+  text-align: center;
+  padding: 0 20px;
+}
+.correo input,
+.contraseña input {
+  width: 380px;
+  height: 40px;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.loginBtn button {
+  width: 400px;
+  height: 40px;
+  background-color: rgb(49, 50, 51);
+  color: white;
+  transition-duration: 0.5s;
+  transition-property: all;
+  position: relative;
+  border: 1px solid black;
+  z-index: 1;
+}
+
+.loginBtn button span {
+  position: relative;
+  z-index: 1; /* Add this */
+}
+.loginBtn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  z-index: 0;
+  transition: width 0.7s ease;
+}
+
+.loginBtn button:hover {
+  background: white;
+  color: black;
+}
+.loginBtn button:hover::before {
+  width: 100%;
+}
+
+.bottomLogin {
+  display: flex;
+  gap: 10px;
+}
+.bottomLogin button {
+  font-weight: bold;
+}
