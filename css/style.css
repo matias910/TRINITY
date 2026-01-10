@@ -8,7 +8,7 @@ body {
 }
 
 .First-Part {
-  background-image: url(/images/backgrounds/main.png);
+  background-image: url(../images/backgrounds/main.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 910px;
@@ -169,7 +169,7 @@ button {
 }
 
 .Second-Part {
-  background-image: url(/images/backgrounds/second.png);
+  background-image: url(../images/backgrounds/second.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 910px;
@@ -232,7 +232,7 @@ button {
   width: 100%;
   background-color: rgb(255, 255, 255);
   font-family: "Red Hat Display", sans-serif;
-  /*background-image: url(/images/footer.png);*/
+  /*background-image: url(../images/footer.png);*/
   background-position: 50%;
   background-size: cover;
   background-position: 20%;

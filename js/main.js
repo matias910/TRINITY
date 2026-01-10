@@ -8,19 +8,36 @@ window.addEventListener("scroll", function () {
   }
 });
 
-//home button
+// detect if we are inside /sites/
+function isInSitesFolder() {
+  return window.location.pathname.includes("/sites/");
+}
+
+// HOME button
 window.addEventListener("DOMContentLoaded", function () {
   const homeButton = document.getElementById("home");
+  if (!homeButton) return;
+
   homeButton.addEventListener("click", function () {
-    window.open("../index.html", "_self");
+    if (isInSitesFolder()) {
+      window.location.href = "../index.html"; // from /sites/account.html
+    } else {
+      window.location.href = "index.html"; // from homepage
+    }
   });
 });
 
-//account button
+// ACCOUNT button
 window.addEventListener("DOMContentLoaded", function () {
   const accountButton = document.getElementById("account");
+  if (!accountButton) return;
+
   accountButton.addEventListener("click", function () {
-    window.open("sites/account.html", "_self");
+    if (isInSitesFolder()) {
+      window.location.href = "account.html"; // already in /sites
+    } else {
+      window.location.href = "sites/account.html"; // from homepage
+    }
   });
 });
 
