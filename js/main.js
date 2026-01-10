@@ -13,7 +13,7 @@ function isInSitesFolder() {
   return window.location.pathname.includes("/sites/");
 }
 
-// HOME button
+// home button
 window.addEventListener("DOMContentLoaded", function () {
   const homeButton = document.getElementById("home");
   if (!homeButton) return;
@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ACCOUNT button
+// account button
 window.addEventListener("DOMContentLoaded", function () {
   const accountButton = document.getElementById("account");
   if (!accountButton) return;
@@ -37,6 +37,20 @@ window.addEventListener("DOMContentLoaded", function () {
       window.location.href = "account.html"; // already in /sites
     } else {
       window.location.href = "sites/account.html"; // from homepage
+    }
+  });
+});
+
+//all button
+window.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("all");
+  if (!allButton) return;
+
+  allButton.addEventListener("click", function () {
+    if (isInSitesFolder()) {
+      window.location.href = "all.html"; // from /sites/account.html
+    } else {
+      window.location.href = "sites/all.html"; // from homepage
     }
   });
 });

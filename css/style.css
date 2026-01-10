@@ -283,7 +283,9 @@ ul {
 }
 
 /* Account Page Styles */
+
 .First-Part-Account {
+  font-family: "Red Hat Display", sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -297,7 +299,7 @@ ul {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -150%);
   width: fit-content;
   height: 320px;
   display: flex;
